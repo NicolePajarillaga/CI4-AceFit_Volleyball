@@ -92,16 +92,6 @@
         <p class="priority">Priority: Low</p>
     </div>
 
-    <!-- Training Schedule -->
-    <div class="card">
-        <div class="card-header">
-            <h2>Training Schedule Management</h2>
-            <span class="badge bg-gold" style="color:#222;">Planned</span>
-        </div>
-        <p>Schedule and organize volleyball training sessions, with role-based visibility for clients and staff.</p>
-        <p class="priority">Priority: Medium</p>
-    </div>
-
     <!-- Feedback & Community -->
     <div class="card">
         <div class="card-header">

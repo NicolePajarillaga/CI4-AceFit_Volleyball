@@ -69,13 +69,15 @@
 <body>
     <?= view('components/header.php') ?>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h2>Welcome to AceFit Volleyball</h2>
-            <p>Your ultimate destination for volleyball excellence where players, teams, and fans come together.
-                Explore our premium gear and elevate your game like never before.</p>
-        </div>
-    </section>
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h2>Welcome to AceFit Volleyball</h2>
+                <p>Your ultimate destination for volleyball excellence where players, teams, and fans come together.
+                    Explore our premium gear and elevate your game like never before.</p>
+            </div>
+        </section>
+    </main>
     <?= view('components/cta.php') ?>
     <?= view('components/cards/landingcards.php') ?>
     <?= view('components/footer.php') ?>

@@ -168,9 +168,7 @@
 <body>
 
     <!-- Back Button -->
-    <a href="/" class="back-btn">
-        <span>&larr;</span> Home
-    </a>
+    <?= view('components/buttons/home.php') ?>
 
     <!-- Signup Section -->
     <section class="signup-section">
@@ -199,9 +197,7 @@
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2025 AceFit Volleyball | All Rights Reserved.</p>
-    </footer>
+    <?= view('components/footer.php') ?>
 
 </body>
 

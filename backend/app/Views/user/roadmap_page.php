@@ -120,7 +120,6 @@
 <body>
     <div class="container">
         <!-- Include main site header -->
-        <?= view('components/header.php') ?>
 
         <!-- Page Title -->
         <div class="page-title">

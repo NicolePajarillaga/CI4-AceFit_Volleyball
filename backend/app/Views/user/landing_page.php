@@ -95,7 +95,7 @@
             transform: scale(1.05);
         }
 
-        /* Fullscreen Home */
+        /* Hero Section */
         .hero {
             background-image: url('volleyball-bg.jpg');
             background-size: cover;
@@ -111,7 +111,6 @@
             align-items: center;
             padding: 0 20px;
             margin-top: 90px;
-            /* adjusted to match thicker header */
             position: relative;
         }
 
@@ -139,6 +138,47 @@
         .hero-content p {
             font-size: 20px;
             line-height: 1.6;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background-color: #111;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            position: relative;
+        }
+
+        .cta-section h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: #f5c518;
+        }
+
+        .cta-section p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .cta-section a {
+            background-color: #f5c518;
+            color: black;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.3s ease;
+        }
+
+        .cta-section a:hover {
+            background-color: #fff;
+            color: #111;
+            transform: scale(1.05);
         }
 
         /* Items Section */
@@ -254,7 +294,7 @@
         <nav>
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="/">Items</a></li>
+                <li><a href="#items">Items</a></li>
                 <li><a href="/moodboard">Mood Board</a></li>
                 <li><a href="/roadmap">Road Map</a></li>
                 <li><a href="/login" class="btn">Login</a></li>
@@ -262,7 +302,7 @@
         </nav>
     </header>
 
-    <!-- Fullscreen Home Section -->
+    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
             <h2>Welcome to AceFit Volleyball</h2>
@@ -271,6 +311,14 @@
                 Explore our premium gear and elevate your game like never before.
             </p>
         </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Gear Up for Greatness</h2>
+        <p>Discover high-quality volleyball shoes, apparel, and equipment designed to help you play your best.
+            Don’t wait — elevate your game today with AceFit Volleyball.</p>
+        <a href="#items">Shop Now 🏐</a>
     </section>
 
     <!-- Items Section -->

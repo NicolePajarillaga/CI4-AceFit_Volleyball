@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login | AceFit Volleyball</title>
-
     <style>
         * {
             margin: 0;
@@ -18,38 +17,6 @@
             background-color: #ffffff;
             color: #333;
             scroll-behavior: smooth;
-        }
-
-        /* Back Arrow Button */
-        .back-btn {
-            position: absolute;
-            top: 30px;
-            left: 30px;
-            background-color: #f5c518;
-            color: #222;
-            padding: 12px 16px;
-            border-radius: 50px;
-            font-size: 18px;
-            text-decoration: none;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            transition: all 0.3s ease;
-            z-index: 3;
-            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
-        }
-
-        .back-btn:hover {
-            background-color: #222;
-            color: #fff;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-        }
-
-        .back-btn span {
-            font-size: 22px;
-            line-height: 0;
         }
 
         /* Login Section */
@@ -167,10 +134,7 @@
 
 <body>
 
-    <!-- Back Button -->
-    <a href="/" class="back-btn">
-        <span>&larr;</span> Home
-    </a>
+    <?= view('components/buttons/home.php') ?>
 
     <!-- Login Section -->
     <section class="login-section">
@@ -181,23 +145,17 @@
                     <label for="username">Username</label>
                     <input type="text" id="username" name="username" placeholder="Enter your username" required>
                 </div>
-
                 <div class="input-group">
                     <label for="password">Password</label>
                     <input type="password" id="password" name="password" placeholder="Enter your password" required>
                 </div>
-
                 <button type="submit" class="login-btn">Login</button>
             </form>
-
             <p>Don’t have an account? <a href="/signup">Sign up</a></p>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2025 AceFit Volleyball | All Rights Reserved.</p>
-    </footer>
-
+    <?= view('components/footer.php') ?>
 </body>
 
 </html>

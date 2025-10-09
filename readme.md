@@ -8,7 +8,7 @@
     <img src="backend/public/assets/profile.jpg" alt="ganda" width="130" height="100">
   </a>
 <!-- * Title Section -->
-  <h3 align="center">CI4-AceFit_Volleyball</h3>
+  <h3 align="center">AceFit Volleyball</h3>
 </div>
 
 <!-- * Description Section -->

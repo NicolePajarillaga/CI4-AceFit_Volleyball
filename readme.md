@@ -4,17 +4,16 @@
 <br/>
 
 <div align="center">
-  <a href="https://github.com/zyx-0314/">
-    <img src="./assets/img/nyebe_white.png" alt="Nyebe" width="130" height="100">
+  <a href="https://github.com/NicolePajarillaga/CI4-AceFit_Volleyball">
+    <img src="backend/public/assets/profile_pic.jpg" width="130" height="100">
   </a>
 <!-- * Title Section -->
-  <h3 align="center">AD - CI4 Template</h3>
+  <h3 align="center">AceFit Volleyball</h3>
 </div>
 
 <!-- * Description Section -->
 <div align="center">
-This repository is a beginner-friendly CodeIgniter 4 template.  
-It helps teams quickly bootstrap backend + frontend projects, with simple sample modules that show how to extend the system.
+AceFit Volleyball is a sports brand and platform dedicated to promoting volleyball through quality gear, training programs, and community engagement. It offers players and enthusiasts reliable products, team management tools, and a space to connect and improve their game.
 </div>
 
 <br/>
@@ -55,22 +54,19 @@ It helps teams quickly bootstrap backend + frontend projects, with simple sample
 
 ## Overview
 
-This template provides a **minimal CodeIgniter 4 project layout** with conventions for file organization, commit practices, and simple modules.
-
-It is designed to be **easy to start with** and a **reference for adding new features**.
-
-* **Purpose**: a clean starting point for CI4 apps.
-* **Audience**: developers who want a predictable structure and quick onboarding.
+AceFit Volleyball is a sports brand and platform dedicated to promoting volleyball through quality gear, training programs, and community engagement. It offers players and enthusiasts reliable products, team management tools, and a space to connect and improve their game.
 
 ### Key Components
+These are sample modules included (or suggested) for learning how to add features:
 
-These are **sample modules** included (or suggested) for learning how to add features:
+| **Component** | **Purpose** | **Notes** |
+|----------------|-------------|-----------|
+| **Auth Module** | Handles login, logout, and role verification for admins, employees, and clients. | Uses CI4 sessions with MySQL `users` table. |
+| **User Management** | Allows admin to create, update, or delete employee and client accounts. | Demonstrates CRUD operations with access control. |
+| **Services Module** | Manages volleyball products such as shoes, apparel, and equipment. | Supports adding, updating, deleting, and viewing items. |
+| **Request Module** | Handles user requests for delivery, customization, or exchange. | Includes request creation, tracking, and admin approval. |
+| **CRUD Operations** | Core feature for creating, reading, updating, and deleting data. | Implements Controller → Service → Repository pattern. |
 
-| Component                 | Purpose                                                             | Notes                                                   |
-| ------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------- |
-| **Auth (Sample)**         | Basic login/logout and role check (admin/user).                     | Uses CI4 sessions + MySQL `users` table.                |
-| **CRUD Module**           | Example entity (`Posts` or `Tasks`) with create/read/update/delete. | Demonstrates Controller → Service → Repository pattern. |
-| **Scheduler (Sample)**    | Simple to-do list with due dates.                                   | Shows how to extend with new tables and services.       |
 
  <!-- ! Start simple. Use these modules as **learning samples**; extend or replace them based on your project’s needs. -->
 

@@ -2,133 +2,203 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AceFit Volleyball | Roadmap</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | AceFit Volleyball</title>
 
     <style>
-        /* Font & body */
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #fff;
-            color: #222;
+        * {
             margin: 0;
             padding: 0;
-            /* remove padding here */
-        }
-
-        main {
-            margin-top: 120px;
-            /* space for fixed header */
-            padding: 2.5rem 1.5rem;
             box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
         }
 
-        /* Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
+        body {
+            background-color: #ffffff;
+            color: #333;
+            scroll-behavior: smooth;
         }
 
-        /* Page Title */
-        .page-title {
-            margin-bottom: 2rem;
-        }
-
-        .page-title h1 {
-            font-weight: 700;
-            font-size: 2.25rem;
-            letter-spacing: 0.5px;
-            margin-bottom: 0.5rem;
-        }
-
-        .page-title p {
-            color: #555;
-            font-size: 0.875rem;
-            margin: 0;
-        }
-
-        /* Badge */
-        .badge {
-            display: inline-block;
-            font-weight: 600;
-            font-size: 0.75rem;
-            padding: 0.25rem 0.75rem;
-            border-radius: 9999px;
-        }
-
-        .bg-gold {
+        /* Back Arrow Button */
+        .back-btn {
+            position: absolute;
+            top: 30px;
+            left: 30px;
             background-color: #f5c518;
-        }
-
-        .text-gold {
-            color: #f5c518;
-        }
-
-        /* Cards */
-        .card {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 1rem;
-            padding: 1.75rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            margin-bottom: 1.5rem;
-        }
-
-        .card:hover {
-            transform: translateY(-0.25rem);
-            box-shadow: 0 8px 20px rgba(245, 197, 24, 0.25);
-        }
-
-        .card-header {
+            color: #222;
+            padding: 12px 16px;
+            border-radius: 50px;
+            font-size: 18px;
+            text-decoration: none;
+            font-weight: 600;
             display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            z-index: 3;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
         }
 
-        .card p {
-            color: #444;
-            margin-top: 0.5rem;
+        .back-btn:hover {
+            background-color: #222;
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
         }
 
-        .card p.priority {
-            color: #777;
-            font-size: 0.75rem;
+        .back-btn span {
+            font-size: 22px;
+            line-height: 0;
+        }
+
+        /* Signup Section */
+        .signup-section {
+            height: 100vh;
+            width: 100%;
+            background-image: url('volleyball-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        /* Overlay */
+        .signup-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+
+        /* Signup Box */
+        .signup-box {
+            z-index: 2;
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 40px 50px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            width: 350px;
+            text-align: center;
+        }
+
+        .signup-box h2 {
+            margin-bottom: 25px;
+            color: #222;
+        }
+
+        .input-group {
+            margin-bottom: 18px;
+            text-align: left;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
             font-weight: 500;
-            font-style: italic;
-            margin-top: 0.75rem;
         }
 
-        /* Divider */
-        .divider {
-            height: 1px;
-            background-color: rgba(245, 197, 24, 0.5);
-            margin: 3rem 0;
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 15px;
+        }
+
+        .input-group input:focus {
+            border-color: #f5c518;
+            outline: none;
+            box-shadow: 0 0 4px rgba(245, 197, 24, 0.8);
+        }
+
+        .signup-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #f5c518;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 16px;
+            color: #222;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .signup-btn:hover {
+            background-color: #222;
+            color: white;
+        }
+
+        .signup-box p {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .signup-box a {
+            color: #f5c518;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .signup-box a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
 
 <body>
-    <!-- Header -->
-    <?= view('components/header.php') ?>
 
-    <!-- Main content -->
-    <main>
-        <div class="container">
-            <div class="page-title">
-                <h1>AceFit Volleyball Roadmap</h1>
-                <p>A visual overview of AceFit Volleyball’s system features and milestones.</p>
-            </div>
+    <!-- Back Button -->
+    <?= view('components/buttons/home.php') ?>
 
-            <?= view('components/cards/roadmapcards.php') ?>
+    <!-- Signup Section -->
+    <section class="signup-section">
+        <div class="signup-box">
+            <h2>Create an AceFit Account</h2>
+            <form action="login_page.php" method="POST">
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Re-enter your password" required>
+                </div>
+
+                <button type="submit" class="signup-btn">Sign Up</button>
+            </form>
+
+            <p>Already have an account? <a href="/login">Login here</a></p>
         </div>
-    </main>
+    </section>
 
-
-    <!-- Footer -->
     <?= view('components/footer.php') ?>
+
 </body>
 
 </html>

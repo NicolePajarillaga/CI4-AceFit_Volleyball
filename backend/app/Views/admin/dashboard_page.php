@@ -16,8 +16,8 @@
         }
 
         body {
-            background-color: #f5f5f5;
-            color: #333;
+            background-color: #ffffff;
+            color: #111111;
         }
 
         .layout {
@@ -28,8 +28,9 @@
         /* SIDEBAR */
         .sidebar {
             width: 230px;
-            background: #111827;
-            color: #f9fafb;
+            background: #111111;
+            /* BLACK */
+            color: #ffffff;
             padding: 20px 18px;
         }
 
@@ -40,12 +41,13 @@
         }
 
         .sidebar .brand span {
-            color: #f97316;
+            color: #facc15;
+            /* YELLOW */
         }
 
         .sidebar nav a {
             display: block;
-            color: #e5e7eb;
+            color: #f5f5f5;
             text-decoration: none;
             font-size: 14px;
             padding: 10px 12px;
@@ -55,14 +57,18 @@
 
         .sidebar nav a.active,
         .sidebar nav a:hover {
-            background: #f97316;
-            color: #111827;
+            background: #facc15;
+            /* YELLOW */
+            color: #111111;
+            /* BLACK TEXT */
         }
 
         /* MAIN */
         main {
             flex: 1;
             padding: 20px 24px 30px;
+            background-color: #f9f9f9;
+            /* LIGHT WHITE */
         }
 
         .topbar {
@@ -72,11 +78,12 @@
         .topbar-title {
             font-size: 22px;
             font-weight: 600;
+            color: #111111;
         }
 
         .topbar-sub {
             font-size: 13px;
-            color: #666;
+            color: #555;
         }
 
         /* STATS */
@@ -91,27 +98,29 @@
             background: #ffffff;
             border-radius: 10px;
             padding: 14px 16px;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+            border: 1px solid #e5e5e5;
         }
 
         .card-title {
             font-size: 12px;
-            color: #6b7280;
+            color: #555;
         }
 
         .card-value {
             font-size: 22px;
             font-weight: 600;
             margin-top: 3px;
+            color: #111111;
         }
 
         .card-tag {
             font-size: 11px;
             margin-top: 6px;
-            background: #f97316;
+            background: #facc15;
+            /* YELLOW */
             padding: 3px 7px;
             border-radius: 999px;
-            color: #111827;
+            color: #111111;
             display: inline-block;
         }
 
@@ -134,6 +143,12 @@
             overflow-y: auto;
         }
 
+        th {
+            background: #facc15;
+            /* YELLOW */
+            color: #111111;
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
@@ -144,13 +159,6 @@
         td {
             padding: 8px 10px;
             border-bottom: 1px solid #ddd;
-        }
-
-        th {
-            background: #f3f4f6;
-            font-weight: 500;
-            position: sticky;
-            top: 0;
         }
 
         .status-pill {
@@ -179,19 +187,21 @@
             border-radius: 10px;
             padding: 10px 12px;
             background: #ffffff;
-            border: 1px dashed #d1d5db;
+            border: 1px dashed #000000;
             cursor: pointer;
         }
 
         .qa-item:hover {
-            border: 1px solid #f97316;
+            border: 1px solid #facc15;
+            /* YELLOW */
         }
 
         .tagline-box {
             margin-top: 12px;
-            background: linear-gradient(135deg, #f97316, #fb923c);
+            background: #facc15;
+            /* YELLOW */
             padding: 12px;
-            color: #111827;
+            color: #111111;
             border-radius: 10px;
         }
 

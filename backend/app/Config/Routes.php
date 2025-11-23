@@ -13,7 +13,7 @@ $routes->get('/login', 'Auth::login_page');
 $routes->get('/signup', 'Auth::signup_page');
 
 $routes->post('/login', 'Auth::login');
-$routes->post('logout', 'Auth::logout');
 $routes->post('/signup', 'Auth::signup');
+$routes->get('/logout', 'Auth::logout');
 
 $routes->get('/admin/dashboard_page', 'Admin::dashboard_page');

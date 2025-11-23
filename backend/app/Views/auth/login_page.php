@@ -140,17 +140,39 @@
     <section class="login-section">
         <div class="login-box">
             <h2>Login to AceFit</h2>
-            <form action="dashboard.php" method="POST">
+            <form action="<?= site_url('/login') ?>" method="POST">
+                <?= csrf_field() ?> <!-- optional, if CSRF is enabled -->
+
                 <div class="input-group">
-                    <label for="username">Username</label>
-                    <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                    <label for="email">Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        value="<?= esc($old['email'] ?? '') ?>"
+                        required>
+                    <?php if (!empty($errors['email'])): ?>
+                        <small style="color: red; font-size: 12px;"><?= esc($errors['email']) ?></small>
+                    <?php endif; ?>
                 </div>
+
                 <div class="input-group">
                     <label for="password">Password</label>
-                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Enter your password"
+                        required>
+                    <?php if (!empty($errors['password'])): ?>
+                        <small style="color: red; font-size: 12px;"><?= esc($errors['password']) ?></small>
+                    <?php endif; ?>
                 </div>
+
                 <button type="submit" class="login-btn">Login</button>
             </form>
+
             <p>Don’t have an account? <a href="/signup">Sign up</a></p>
         </div>
     </section>

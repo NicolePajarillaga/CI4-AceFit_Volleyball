@@ -1,14 +1,24 @@
+<?php $session = session(); ?>
+
 <header class="header">
     <div class="logo">
         <h1>AceFit Volleyball</h1>
     </div>
-    <nav>
+
+    <nav>z
         <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/moodboard">Mood Board</a></li>
             <li><a href="/roadmap">Road Map</a></li>
+
             <li class="login-item">
-                <a href="/login" class="btn">Login</a>
+                <?php if ($session->has('user')): ?>
+                    <!-- USER LOGGED IN → SHOW LOGOUT -->
+                    <a href="<?= site_url('/logout') ?>" class="btn">Logout</a>
+                <?php else: ?>
+                    <!-- NO USER LOGGED IN → SHOW LOGIN -->
+                    <a href="<?= site_url('/login') ?>" class="btn">Login</a>
+                <?php endif; ?>
             </li>
         </ul>
     </nav>
@@ -63,7 +73,7 @@
         transform: scale(1.05);
     }
 
-    /* Gold Theme Button */
+    /* Gold Button */
     .btn {
         background-color: #f5c518;
         color: black;

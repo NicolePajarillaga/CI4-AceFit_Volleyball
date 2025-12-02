@@ -47,12 +47,6 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
         }
 
-        .back-btn span {
-            font-size: 22px;
-            line-height: 0;
-        }
-
-        /* Signup Section */
         .signup-section {
             height: 100vh;
             width: 100%;
@@ -65,7 +59,6 @@
             position: relative;
         }
 
-        /* Overlay */
         .signup-section::before {
             content: "";
             position: absolute;
@@ -77,7 +70,6 @@
             z-index: 1;
         }
 
-        /* Signup Box */
         .signup-box {
             z-index: 2;
             background-color: rgba(255, 255, 255, 0.95);
@@ -152,16 +144,6 @@
         .signup-box a:hover {
             text-decoration: underline;
         }
-
-        footer {
-            background-color: #222;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-        }
     </style>
 </head>
 
@@ -170,28 +152,41 @@
     <!-- Back Button -->
     <?= view('components/buttons/home.php') ?>
 
-    <!-- Signup Section -->
     <section class="signup-section">
         <div class="signup-box">
             <h2>Create an AceFit Account</h2>
-            <form action="login_page.php" method="POST">
+
+            <form action="/signup" method="POST">
+                <?= csrf_field() ?>
+
+                <div class="input-group">
+                    <label for="first_name">First Name</label>
+                    <input type="text" id="first_name" name="first_name" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="last_name">Last Name</label>
+                    <input type="text" id="last_name" name="last_name" required>
+                </div>
+
                 <div class="input-group">
                     <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    <input type="email" id="email" name="email" required>
                 </div>
 
                 <div class="input-group">
                     <label for="password">Password</label>
-                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    <input type="password" id="password" name="password" required>
                 </div>
 
                 <div class="input-group">
-                    <label for="confirm-password">Confirm Password</label>
-                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Re-enter your password" required>
+                    <label for="password_confirm">Confirm Password</label>
+                    <input type="password" id="password_confirm" name="password_confirm" required>
                 </div>
 
                 <button type="submit" class="signup-btn">Sign Up</button>
             </form>
+
 
             <p>Already have an account? <a href="/login">Login here</a></p>
         </div>

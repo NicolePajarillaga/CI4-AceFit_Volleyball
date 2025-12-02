@@ -1,10 +1,5 @@
 <?php
 
-use CodeIgniter\Router\RouteCollection;
-
-/**
- * @var RouteCollection $routes
- */
 $routes->get('/', 'Users::index');
 $routes->get('/moodboard', 'Users::moodboard_page');
 $routes->get('/roadmap', 'Users::roadmap_page');
@@ -16,4 +11,5 @@ $routes->post('/login', 'Auth::login');
 $routes->post('/signup', 'Auth::signup');
 $routes->get('/logout', 'Auth::logout');
 
+// ADMIN
 $routes->get('/admin/dashboard_page', 'Admin::dashboard_page');

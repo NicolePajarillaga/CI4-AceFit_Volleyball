@@ -5,7 +5,7 @@
         <h1>AceFit Volleyball</h1>
     </div>
 
-    <nav>z
+    <nav>
         <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/moodboard">Mood Board</a></li>

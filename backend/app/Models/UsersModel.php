@@ -16,7 +16,7 @@ class UsersModel extends Model
         'first_name',
         'last_name',
         'email',
-        'passwod_hash',
+        'password_hash',
         'type',
         'created_at',
         'updated_at',

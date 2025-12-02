@@ -3,31 +3,30 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
-use CodeIgniter\HTTP\ResponseInterface;
 
 class Users extends BaseController
 {
-    public function index(): string
+    public function index()
     {
         return view('user/landing_page');
     }
 
-    public function login_page(): string
+    public function login_page()
     {
-        return view('user/login_page');
+        return view('auth/login_page');
     }
 
-    public function signup_page(): string
+    public function signup_page()
     {
-        return view('user/signup_page');
+        return view('auth/signup_page');
     }
 
-    public function moodboard_page(): string
+    public function moodboard_page()
     {
         return view('user/moodboard_page');
     }
 
-    public function roadmap_page(): string
+    public function roadmap_page()
     {
         return view('user/roadmap_page');
     }
